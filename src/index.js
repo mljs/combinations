@@ -1,8 +1,10 @@
 'use strict';
+const defaultOptions = {
+    mode: 'index'
+};
 
-
-
-module.exports = function *(M, N, options = {mode: 'index'}) {
+module.exports = function *(M, N, options) {
+    options = Object.assign({}, defaultOptions, options);
     var a = new Array(N);
     var c = new Array(M);
     var b = new Array(N);
