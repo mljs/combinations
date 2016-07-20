@@ -7,10 +7,35 @@
   
 Generate all possible unordered samples of size m, without replacement, from a set of n objects
 
+Very low memory footprint even if the number of combinations to generate is high.
+
 ## Installation
 
 ```
 $ npm install ml-combinations
+```
+
+## Usage
+```js
+// the package exports a generator function
+const combinations = require('ml-combinations');
+const options = {mode: 'index'};
+
+// the generator function returns an iterator
+var gen = combinations(2, 4, options);
+
+// You can loop throw the iterator
+for(let combination of gen) {
+    console.log(combination);
+}
+
+// Or use destructuring
+console.log([...gen]); // [ [ 3, 2 ], [ 0, 2 ], [ 1, 2 ], [ 1, 2 ], [ 0, 2 ], [ 0, 1 ] ]
+
+// Use mask mode instead of index mode (index mode is the default)
+options.mode = 'mask';
+gen = combinations(2, 4, options);
+console.log([...gen]); // [ [ 0, 0, 1, 1 ][ 1, 0, 0, 1 ],[ 0, 1, 0, 1 ],[ 0, 1, 1, 0 ],[ 1, 0, 1, 0 ],[ 1, 1, 0, 0 ] ]
 ```
 
 ## References
