@@ -1,6 +1,6 @@
 {
   "name": "ml-combinations",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate all possible unordered samples of size m, without replacement, from a set of n objects",
   "main": "./src/index.js",
   "files": [
