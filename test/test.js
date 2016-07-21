@@ -24,6 +24,7 @@ describe('Compute combinations', function () {
     });
 
     it('should generate some more complicated comibinations', function () {
-        Array.from(combinations(2, 4)).should.eql([[3, 2], [0, 2], [1, 2], [1, 2], [0, 2], [0, 1]]);
+        Array.from(combinations(2, 3)).should.eql([[1, 2], [0, 2], [0, 1]]);
+        Array.from(combinations(2, 4)).should.eql([[2, 3], [0, 3], [1, 3], [1, 2], [0, 2], [0, 1]]);
     });
 });

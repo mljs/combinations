@@ -20,7 +20,7 @@ module.exports = function *(M, N, options) {
 
     // init c
     for (i = 0; i < M; i++) {
-        c[i] = N - i - 1;
+        c[i] = N - M + i;
     }
 
     // init p
