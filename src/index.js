@@ -34,25 +34,30 @@ module.exports = function *(M, N, options) {
     function twiddle() {
         var i, j, k;
         j = 1;
-        while (p[j] <= 0)
+        while (p[j] <= 0) {
             j++;
+        }
         if (p[j - 1] === 0) {
-            for (i = j - 1; i !== 1; i--)
+            for (i = j - 1; i !== 1; i--) {
                 p[i] = -1;
+            }
             p[j] = 0;
             x = z = 0;
             p[1] = 1;
             y = j - 1;
         } else {
-            if (j > 1)
+            if (j > 1) {
                 p[j - 1] = 0;
-            do
+            }
+            do {
                 j++;
+            }
             while (p[j] > 0);
             k = j - 1;
             i = j;
-            while (p[i] === 0)
+            while (p[i] === 0) {
                 p[i++] = -1;
+            }
             if (p[i] === -1) {
                 p[i] = p[k];
                 z = p[k] - 1;

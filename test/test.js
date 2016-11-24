@@ -11,7 +11,6 @@ describe('Compute combinations', function () {
 
     it('should generate 1 of N combinations (mask mode)', function () {
         var options = {mode: 'mask'};
-        
         Array.from(combinations(1, 1, options)).should.eql([[1]]);
         Array.from(combinations(1, 2, options)).should.eql([[0, 1], [1, 0]]);
     });
