@@ -56,6 +56,7 @@ Communications of the Association for Computing Machinery 13:6:368 (1970).
 [travis-image]: https://img.shields.io/travis/mljs/combinations/master.svg?style=flat-square
 [travis-url]: https://travis-ci.org/mljs/combinations
 [david-image]: https://img.shields.io/david/mljs/combinations.svg?style=flat-square
+[codecov-url]: https://codecov.io/gh/mljs/combinations
 [codecov-image]: https://img.shields.io/codecov/c/github/mljs/combinations.svg?style=flat-square
 [david-url]: https://david-dm.org/mljs/combinations
 [download-image]: https://img.shields.io/npm/dm/ml-combinations.svg?style=flat-square
