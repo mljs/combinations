@@ -1,10 +1,11 @@
 {
   "name": "ml-combinations",
   "version": "1.0.1",
-  "description":
-    "Generate all possible unordered samples of size m, without replacement, from a set of n objects",
+  "description": "Generate all possible unordered samples of size m, without replacement, from a set of n objects",
   "main": "./src/index.js",
-  "files": ["src"],
+  "files": [
+    "src"
+  ],
   "scripts": {
     "eslint": "eslint src test",
     "eslint-fix": "npm run eslint -- --fix",
@@ -17,7 +18,13 @@
     "type": "git",
     "url": "https://github.com/mljs/combinations.git"
   },
-  "keywords": ["machine", "learning", "data", "mining", "datamining"],
+  "keywords": [
+    "machine",
+    "learning",
+    "data",
+    "mining",
+    "datamining"
+  ],
   "author": "Daniel Kostro",
   "license": "MIT",
   "bugs": {
@@ -25,6 +32,7 @@
   },
   "homepage": "https://github.com/mljs/combinations#readme",
   "devDependencies": {
+    "codecov": "^3.0.2",
     "eslint": "^4.19.1",
     "eslint-config-cheminfo": "^1.17.4",
     "eslint-plugin-import": "^2.12.0",
