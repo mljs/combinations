@@ -9,6 +9,8 @@ Generate all possible unordered samples of size m, without replacement, from a s
 
 Very low memory footprint even if the number of combinations to generate is high.
 
+Thank to generators, you can iterate over all possible samples, without creating a very big array.
+
 ## Installation
 
 ```
@@ -29,7 +31,7 @@ for(let combination of gen) {
     console.log(combination);
 }
 
-// Or use destructuring
+// Or use destructuring, if you want to manipulate the array with all possible sample combinations
 console.log([...gen]); // [ [ 3, 2 ], [ 0, 2 ], [ 1, 2 ], [ 1, 2 ], [ 0, 2 ], [ 0, 1 ] ]
 
 // Use mask mode instead of index mode (index mode is the default)
