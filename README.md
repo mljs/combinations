@@ -5,11 +5,11 @@
 [![Test coverage][codecov-image]][codecov-url]
 [![npm download][download-image]][download-url]
 
-Generate all possible unordered samples of size m, without replacement, from a set of n objects
+Generate all possible [combinations](https://en.wikipedia.org/wiki/Combination), which are all the unordered samples of size k, without replacement, from a set of n objects. The number of k-combinations is equal to the binomial coefficient:
 
-Very low memory footprint even if the number of combinations to generate is high.
+![image](https://user-images.githubusercontent.com/4118690/40847651-445ec4c2-65bd-11e8-86df-58a5c0f16c73.png)
 
-Thank to generators, you can iterate over all possible samples, without creating a very big array.
+Very low memory footprint even if the number of combinations to generate is high. Thank to generators, you can iterate over all possible samples, without creating a very large array.
 
 ## Installation
 
