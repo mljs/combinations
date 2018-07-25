@@ -17,6 +17,24 @@ module.exports = {
       include: 'node_modules/**',
     }),
     babel({
+      babelrc: false,
+      presets: [
+        [
+          'env',
+          {
+            modules: false
+          }
+        ]
+      ],
+      plugins: [
+        [
+          'transform-runtime', {
+            helper: false,
+            polyfill: false,
+            regenerator: true
+          }
+        ]
+      ],
       exclude: 'node_modules/**',
     }),
   ],
