@@ -38,7 +38,7 @@ console.log(Array.from(gen)); // Same thing if destructuring is not supported
 
 // Use mask mode instead of index mode (index mode is the default)
 // The mask mode generates a list of arrays, each of which has a length equal to the number of object
-// Each index has a 0 or 1 to indicate the presence / absence of the object
+// Each index has a 0 or 1 to indicate the absence / presence of the object
 options.mode = 'mask';
 gen = combinations(2, 4, options);
 console.log(Array.from(gen)); // [ [ 0, 0, 1, 1 ][ 1, 0, 0, 1 ],[ 0, 1, 0, 1 ],[ 0, 1, 1, 0 ],[ 1, 0, 1, 0 ],[ 1, 1, 0, 0 ] ]
