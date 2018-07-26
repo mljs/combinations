@@ -9,7 +9,7 @@ Generate all possible [combinations](https://en.wikipedia.org/wiki/Combination),
 
 ![image](https://user-images.githubusercontent.com/4118690/40847651-445ec4c2-65bd-11e8-86df-58a5c0f16c73.png)
 
-Very low memory footprint even if the number of combinations to generate is high. Thank to generators, you can iterate over all possible samples, without creating a very large array.
+Very low memory footprint even if the number of combinations to generate is high. Thanks to generators, you can iterate over all possible samples, without creating a very large array.
 
 ## Installation
 
@@ -27,18 +27,21 @@ const options = { mode: 'index' };
 // the generator function returns an iterator
 var gen = combinations(2, 4, options);
 
-// You can loop throw the iterator
+// You can loop thr the iterator
 for (let combination of gen) {
   console.log(combination);
 }
 
 // Or use destructuring, if you want to manipulate the array with all possible sample combinations
 console.log([...gen]); // [ [ 3, 2 ], [ 0, 2 ], [ 1, 2 ], [ 1, 2 ], [ 0, 2 ], [ 0, 1 ] ]
+console.log(Array.from(gen)); // Same thing if destructuring is not supported
 
 // Use mask mode instead of index mode (index mode is the default)
+// The mask mode generates a list of arrays, each of which has a length equal to the number of object
+// Each index has a 0 or 1 to indicate the presence / absence of the object
 options.mode = 'mask';
 gen = combinations(2, 4, options);
-console.log([...gen]); // [ [ 0, 0, 1, 1 ][ 1, 0, 0, 1 ],[ 0, 1, 0, 1 ],[ 0, 1, 1, 0 ],[ 1, 0, 1, 0 ],[ 1, 1, 0, 0 ] ]
+console.log(Array.from(gen)); // [ [ 0, 0, 1, 1 ][ 1, 0, 0, 1 ],[ 0, 1, 0, 1 ],[ 0, 1, 1, 0 ],[ 1, 0, 1, 0 ],[ 1, 1, 0, 0 ] ]
 ```
 
 ## References
